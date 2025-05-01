@@ -1,0 +1,382 @@
+/* Reinicio general y configuración de box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Fuente principal */
+}
+
+/* Estilo del cuerpo */
+body {
+    background: #EDE7E3; /* Color de fondo claro */
+    color: #16697A; /* Color principal del texto */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem; /* Base de 16px */
+}
+
+/* Sección del encabezado */
+header {
+    padding: 1.5rem 2rem;
+    text-align: center;
+    background-color: #16697A; /* Fondo oscuro para el encabezado */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #EDE7E3; /* Texto claro */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFA62B; /* Color al pasar el cursor */
+}
+
+/* Estilo general para secciones principales */
+main, section {
+    padding: 2rem;
+    max-width: 60rem; /* 960px */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    text-align: center;
+    color: #16697A;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.4rem; }
+
+/* Sección de introducción */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para misión y visión */
+.mission, .vision {
+    flex: 1;
+    background-color: #FDF7F2;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 100%;
+}
+
+.mission h3, .vision h3 {
+    color: #16697A;
+    margin-bottom: 1rem;
+}
+
+.mission p, .vision p {
+    color: #489FB5;
+    font-size: 1.1rem;
+}
+
+/* Botón de llamada a la acción */
+.cta-btn {
+    background-color: #FFA62B;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    align-self: center;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #e68a00; /* Color al pasar el cursor */
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: 0 -0.625rem; /* 10px */
+}
+
+.carousel-item {
+    padding: 0 0.625rem; /* 10px */
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 25rem; /* 400px */
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+}
+
+/* Controles del carrusel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(22, 105, 122, 0.8);
+    color: white;
+    border: none;
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.carousel-control:hover {
+    background-color: rgba(22, 105, 122, 1);
+}
+
+.carousel-control.left { left: 0.625rem; /* 10px */ }
+.carousel-control.right { right: 0.625rem; /* 10px */ }
+
+/* Estilo para eventos */
+.event {
+    display: flex;
+    background-color: #FDF7F2;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-0.3125rem); /* 5px */
+}
+
+.event-icon {
+    font-size: 3rem;
+    color: #FFA62B;
+}
+
+.event-info h3 {
+    color: #16697A;
+    margin-bottom: 0.5rem;
+}
+
+.event-info p {
+    color: #489FB5;
+    font-size: 1rem;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    background-color: #FDF7F2;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Grupos de formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+    color: #16697A;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 1rem;
+    border: 0.0625rem solid #82C0CC; /* 1px */
+    border-radius: 0.75rem;
+    background-color: #FDF7F2;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #489FB5;
+    outline: none;
+    background-color: #F9FAFB;
+    box-shadow: 0 0 0 0.1875rem rgba(72, 159, 181, 0.2); /* 3px */
+}
+
+/* Grupo de checkboxes */
+.checkbox-group {
+    grid-column: span 2;
+}
+
+.checkbox-group h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.conference-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.conference-option i {
+    font-size: 1.4rem;
+    color: #16697A;
+}
+
+.conference-option .description {
+    flex: 1;
+    min-width: 15.625rem; /* 250px */
+    text-align: justify;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.125rem; /* 50px */
+    height: 1.625rem; /* 26px */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 1.625rem; /* 26px */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.25rem; /* 20px */
+    width: 1.25rem; /* 20px */
+    left: 0.1875rem; /* 3px */
+    bottom: 0.1875rem; /* 3px */
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+    background-color: #FFA62B;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(1.5rem); /* 24px */
+}
+
+/* Botón de registro */
+#btnRegistrar {
+    grid-column: span 2;
+    padding: 0.9rem 1.5rem;
+    background: linear-gradient(135deg, #FFA62B, #489FB5);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#btnRegistrar:hover {
+    transform: translateY(-0.125rem); /* 2px */
+    box-shadow: 0 0.5rem 1.25rem rgba(179, 183, 146, 0.3); /* 8px 20px */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #16697A;
+    font-size: 0.875rem;
+}
+
+#selectedConferences strong {
+    font-weight: bold;
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 48rem) { /* 768px */
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .conference-option {
+        flex-direction: column;
+    }
+
+    #btnRegistrar {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mission, .vision {
+        width: 100%;
+    }
+}
